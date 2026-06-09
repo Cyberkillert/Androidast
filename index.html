@@ -1,77 +1,178 @@
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"></meta>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
-    <title>android ast </title>
-    <meta name="description" content="Welcome to android ast">
-    <link rel="icon" href="https://i.ibb.co/FbCtNrwP/android.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Android AST</title>
+  <meta name="description" content="Android AST - Exclusive collection of Android tools">
+  <link rel="icon" href="https://i.ibb.co/FbCtNrwP/android.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- App Header Section -->
-        <div class="app-header">
-            <img alt="App Icon" src="https://i.ibb.co/FbCtNrwP/android.png" />
-            <div>
-                <h1>ANDROID AST </h1>
-                <p>versen : 2.0</p>
-            </div>
-        </div>
 
-        <!-- Scroll Image Section -->
-        <div class="galWrp">
-            <a href="https://i.ibb.co/YFSXkCm5/Screenshot-2025-09-14-09-09-31-86-68c80e9b0a29370b5bc29411115eba19.jpg" target="_blank">
-                <img alt="Screenshot-1" border="0" src="https://i.ibb.co/YFSXkCm5/Screenshot-2025-09-14-09-09-31-86-68c80e9b0a29370b5bc29411115eba19.jpg" />
-            </a>
-            <a href="https://i.ibb.co/NgmKzZK1/Screenshot-2025-09-14-09-09-41-51-68c80e9b0a29370b5bc29411115eba19.jpg" target="_blank">
-                <img alt="Screenshot-2" border="0" src="https://i.ibb.co/NgmKzZK1/Screenshot-2025-09-14-09-09-41-51-68c80e9b0a29370b5bc29411115eba19.jpg" />
-            </a>
-            <a href="https://i.ibb.co/210T8S14/Screenshot-2025-09-14-09-09-46-04-68c80e9b0a29370b5bc29411115eba19.jpg" target="_blank">
-                <img alt="Screenshot-3" border="0" src="https://i.ibb.co/210T8S14/Screenshot-2025-09-14-09-09-46-04-68c80e9b0a29370b5bc29411115eba19.jpg" />
-            </a>
-            <a href="https://i.ibb.co/QjznP9nT/Screenshot-2025-09-14-09-09-49-51-68c80e9b0a29370b5bc29411115eba19.jpg" target="_blank">
-                <img alt="Screenshot-4" border="0" src="https://i.ibb.co/QjznP9nT/Screenshot-2025-09-14-09-09-49-51-68c80e9b0a29370b5bc29411115eba19.jpg" />
-            </a>
-            <a href="https://i.ibb.co/6fCBD9J/Screenshot-2025-09-14-09-09-57-83-68c80e9b0a29370b5bc29411115eba19.jpg" target="_blank">
-                <img alt="Screenshot-5" border="0" src="https://i.ibb.co/6fCBD9J/Screenshot-2025-09-14-09-09-57-83-68c80e9b0a29370b5bc29411115eba19.jpg" />
-            </a>
-        </div>
+<canvas id="bgCanvas"></canvas>
 
-        <!-- Description Section -->
-        <div class="description">
-            <!-- Download Button -->
-            <div class="download-button">
-                <a href="https://Cyberkillert.github.io/ast/?id=ast_download" target="_blank">
-                    <img alt="App Icon" src="https://i.ibb.co/FbCtNrwP/android.png" style="height: 25px; margin-right: 10px; vertical-align: middle; width: 25px;" />
-                    Download Now<br />
-                </a>
-            </div>
-        </div>
+<div class="page">
 
-        <h2><br />About this App</h2>
-        <p id="app-description">
-            <span id="short-description">
-                - Easy to use ast<br />
-                - made from 10/15<br />
-                - exclusive collection of tools <br />
-                <br />
-            </span>
-            <span id="full-description" style="display: none;">
-                <br />
-                1. Seamless user Experience<br /><br />
-                2. Browse thousands of sites with easy navigation...<br /><br />
-                3. Exclusive apps<br /><br />
-                4. multiple screipt support ·bat cmd etc, and member-only discounts.<br /><br />
-                5. dinamic links support<br /><br />
-                6. exclusive collection of apps<br /><br />
-                7. etc···<br /><br />
-            </span>
-        </p>
-        <button id="toggle-button" style="background-color: #007bff; border-radius: 5px; border: none; color: white; cursor: pointer; margin-left: 105px; padding: 10px 20px; vertical-align: middle;">
-            Show More
-        </button>
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="app-icon-wrap">
+      <div class="icon-glow"></div>
+      <div class="icon-ring"></div>
+      <img class="app-icon" src="icon.png" alt="Android AST">
     </div>
+    <div class="app-name">ANDROID AST</div>
+    <div class="app-tagline">Exclusive Android Toolbox</div>
+    <div class="badge-row">
+      <span class="badge badge-ver"><span class="live-dot"></span> v2.0</span>
+      <span class="badge badge-free">Free</span>
+      <span class="badge badge-apk">APK</span>
+    </div>
+    <div class="dl-section">
+      <a class="dl-btn" href="https://Cyberkillert.github.io/ast/?id=ast_download" target="_blank" rel="noopener">
+        <svg class="dl-icon" viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6z"/><path d="M20 18H4v2h16v-2z"/></svg>
+        Download Now
+      </a>
+      <span class="dl-hint">Android · APK · No Ads</span>
+    </div>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- ── SCREENSHOTS ── -->
+  <div class="screenshots-section">
+    <div class="sec-head">
+      <span class="sec-title">Screenshots</span>
+      <span class="sec-line"></span>
+    </div>
+    <div class="shots-track">
+      <a class="shot" href="https://i.ibb.co/YFSXkCm5/Screenshot-2025-09-14-09-09-31-86-68c80e9b0a29370b5bc29411115eba19.jpg" target="_blank">
+        <img src="https://i.ibb.co/YFSXkCm5/Screenshot-2025-09-14-09-09-31-86-68c80e9b0a29370b5bc29411115eba19.jpg" alt="Screenshot 1">
+        <span class="shot-num">01</span>
+      </a>
+      <a class="shot" href="https://i.ibb.co/NgmKzZK1/Screenshot-2025-09-14-09-09-41-51-68c80e9b0a29370b5bc29411115eba19.jpg" target="_blank">
+        <img src="https://i.ibb.co/NgmKzZK1/Screenshot-2025-09-14-09-09-41-51-68c80e9b0a29370b5bc29411115eba19.jpg" alt="Screenshot 2">
+        <span class="shot-num">02</span>
+      </a>
+      <a class="shot" href="https://i.ibb.co/210T8S14/Screenshot-2025-09-14-09-09-46-04-68c80e9b0a29370b5bc29411115eba19.jpg" target="_blank">
+        <img src="https://i.ibb.co/210T8S14/Screenshot-2025-09-14-09-09-46-04-68c80e9b0a29370b5bc29411115eba19.jpg" alt="Screenshot 3">
+        <span class="shot-num">03</span>
+      </a>
+      <a class="shot" href="https://i.ibb.co/QjznP9nT/Screenshot-2025-09-14-09-09-49-51-68c80e9b0a29370b5bc29411115eba19.jpg" target="_blank">
+        <img src="https://i.ibb.co/QjznP9nT/Screenshot-2025-09-14-09-09-49-51-68c80e9b0a29370b5bc29411115eba19.jpg" alt="Screenshot 4">
+        <span class="shot-num">04</span>
+      </a>
+      <a class="shot" href="https://i.ibb.co/6fCBD9J/Screenshot-2025-09-14-09-09-57-83-68c80e9b0a29370b5bc29411115eba19.jpg" target="_blank">
+        <img src="https://i.ibb.co/6fCBD9J/Screenshot-2025-09-14-09-09-57-83-68c80e9b0a29370b5bc29411115eba19.jpg" alt="Screenshot 5">
+        <span class="shot-num">05</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── FEATURES GRID ── -->
+  <div class="features-section">
+    <div class="sec-head">
+      <span class="sec-title">Features</span>
+      <span class="sec-line"></span>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card">
+        <span class="feat-emoji">🛠️</span>
+        <div class="feat-title">Exclusive Tools</div>
+        <div class="feat-desc">Curated collection of Android tools not found anywhere else.</div>
+      </div>
+      <div class="feat-card">
+        <span class="feat-emoji">⚡</span>
+        <div class="feat-title">Easy to Use</div>
+        <div class="feat-desc">Clean interface designed for speed and simplicity.</div>
+      </div>
+      <div class="feat-card">
+        <span class="feat-emoji">🔗</span>
+        <div class="feat-title">Dynamic Links</div>
+        <div class="feat-desc">Full dynamic link support for seamless navigation.</div>
+      </div>
+      <div class="feat-card">
+        <span class="feat-emoji">📜</span>
+        <div class="feat-title">Script Support</div>
+        <div class="feat-desc">Run bat, cmd and multiple script types natively.</div>
+      </div>
+      <div class="feat-card">
+        <span class="feat-emoji">🌐</span>
+        <div class="feat-title">Browse & Explore</div>
+        <div class="feat-desc">Thousands of sites with smooth, easy navigation.</div>
+      </div>
+      <div class="feat-card">
+        <span class="feat-emoji">🔓</span>
+        <div class="feat-title">Member Perks</div>
+        <div class="feat-desc">Exclusive apps and member-only discounts inside.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <div class="about-section">
+    <div class="sec-head">
+      <span class="sec-title">About</span>
+      <span class="sec-line"></span>
+    </div>
+    <div class="about-card">
+      <div class="about-inner">
+        <ul class="about-list">
+          <li class="about-item">
+            <span class="about-num">01</span>
+            <span class="about-text"><b>Android AST</b> — a powerful all-in-one Android toolbox built since 2015.</span>
+          </li>
+          <li class="about-item">
+            <span class="about-num">02</span>
+            <span class="about-text">Version <b>2.0</b> brings a seamless new experience with a redesigned interface.</span>
+          </li>
+          <li class="about-item">
+            <span class="about-num">03</span>
+            <span class="about-text">Completely <b>free to download</b> — no hidden fees, no subscriptions.</span>
+          </li>
+          <div class="more-items" id="moreItems">
+            <li class="about-item">
+              <span class="about-num">04</span>
+              <span class="about-text">Browse thousands of resources with <b>easy, fast navigation</b>.</span>
+            </li>
+            <li class="about-item">
+              <span class="about-num">05</span>
+              <span class="about-text">Supports <b>bat, cmd</b> and multiple scripting formats out of the box.</span>
+            </li>
+            <li class="about-item">
+              <span class="about-num">06</span>
+              <span class="about-text"><b>Dynamic link support</b> for deep linking across the app ecosystem.</span>
+            </li>
+            <li class="about-item">
+              <span class="about-num">07</span>
+              <span class="about-text">Exclusive <b>member-only</b> apps and special discounts inside.</span>
+            </li>
+          </div>
+        </ul>
+      </div>
+      <button class="toggle-btn" id="toggleBtn">
+        Show More <span class="arr" id="arr">↓</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── BOTTOM DOWNLOAD BANNER ── -->
+  <div class="bottom-banner">
+    <div class="banner-title">Ready to Install?</div>
+    <div class="banner-sub">Free APK · Android · No Ads</div>
+    <a class="banner-dl" href="https://Cyberkillert.github.io/ast/?id=ast_download" target="_blank" rel="noopener">
+      <svg style="width:18px;height:18px;fill:#fff" viewBox="0 0 24 24"><path d="M12 16l-6-6h4V4h4v6h4l-6 6z"/><path d="M20 18H4v2h16v-2z"/></svg>
+      Download APK
+    </a>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="footer">
+    <div class="footer-text">Android AST · v2.0 · 2025</div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
